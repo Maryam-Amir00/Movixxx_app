@@ -20,8 +20,20 @@ const SearchBar = ({setMovies , setLoading, setNoResults}) => {
         .then((response) => {
           const { Response, Search } = response.data;
            if(Response === 'True'){
-            setMovies(Search);
-            setNoResults(false);
+            Promise.all(
+              Search.map( (movie) => 
+                 axiosInstance.get('', {params: {i: movie.imdbID}})
+                 .then(res => res.data)
+                 .catch( err => {
+                  console.error(`Failed to load ${movie.imdbID}`, err);
+                  return null;
+                 })
+              )
+            ).then( (fullData) => {
+              const filtered = fullData.filter(Boolean);
+              setMovies(filtered);
+              setNoResults(filtered.length === 0);
+            })
            } else {
             setMovies([]);
             setNoResults(true);
