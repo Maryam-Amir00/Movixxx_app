@@ -16,9 +16,28 @@ const SearchBar = ({setMovies , setLoading, setNoResults}) => {
 
         setLoading(true);
 
-        
-      })
-    )
+        axiosInstance.get('', {params: {s: searchTerm}})
+        .then((response) => {
+          const { Response, Search } = response.data;
+           if(Response === 'True'){
+            setMovies(Search);
+            setNoResults(false);
+           } else {
+            setMovies([]);
+            setNoResults(true);
+           }
+        }).catch( error => {
+          console.error(error);
+          setNoResults(true);
+        }).finally(() => {
+          setLoading(false);
+        });
+      }, 500), []
+    );
+
+    useEffect(() => {
+      fetchMovies(query);
+    }, [query , fetchMovies]);
 
   return (
     <div className='w-full flex justify-center mt-8 px-4'>
