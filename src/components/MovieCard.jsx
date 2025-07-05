@@ -1,8 +1,21 @@
 import React, { useState } from 'react';
 import { FaHeart } from 'react-icons/fa';
+import { useWatchlist } from '../context/WatchlistContext';
 
-const MovieCard = ({ movie , onClick }) => {
+const MovieCard = ({ movie, onClick }) => {
   const [hovered, setHovered] = useState(false);
+  const { watchlist, addToWatchlist, removeFromWatchlist } = useWatchlist();
+
+  const isInWatchlist = watchlist.some((m) => m.imdbID === movie.imdbID);
+
+  const handleWatchlistToggle = (e) => {
+    e.stopPropagation();
+    if (isInWatchlist) {
+      removeFromWatchlist(movie.imdbID);
+    } else {
+      addToWatchlist(movie);
+    }
+  };
 
   return (
     <div
@@ -39,8 +52,11 @@ const MovieCard = ({ movie , onClick }) => {
 
             <div className="flex justify-between items-center mt-2">
               <span className="text-sm">⭐ {movie.imdbRating || 'N/A'}</span>
-              <button className="text-[#00ffff] text-sm flex items-center gap-1 hover:scale-110 transition">
-                <FaHeart /> WatchList
+              <button
+                className="text-[#00ffff] text-sm flex items-center gap-1 hover:scale-110 transition"
+                onClick={handleWatchlistToggle}
+              >
+                <FaHeart /> {isInWatchlist ? 'Remove' : 'WatchList'}
               </button>
             </div>
           </div>
