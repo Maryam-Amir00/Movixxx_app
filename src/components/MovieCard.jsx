@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { FaHeart } from 'react-icons/fa';
 
-const MovieCard = ({ movie }) => {
+const MovieCard = ({ movie , onClick }) => {
   const [hovered, setHovered] = useState(false);
 
   return (
     <div
+      onClick={onClick}
       className="relative bg-[#1e1e1e] rounded-xl overflow-hidden shadow-lg backdrop-blur-md border border-white/10 transition-transform transform hover:scale-105 hover:shadow-[0_0_20px_#00ffff] hover:border-[#00ffff] duration-300"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -24,7 +25,6 @@ const MovieCard = ({ movie }) => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
       </div>
 
-      {/* Text Section */}
       <div className="absolute bottom-0 w-full p-4 text-white z-10">
         <h3 className="text-lg font-bold mb-1 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
           {movie.Title}

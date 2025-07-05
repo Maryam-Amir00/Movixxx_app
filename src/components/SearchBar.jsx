@@ -33,6 +33,7 @@ const SearchBar = ({setMovies , setLoading, setNoResults}) => {
               const filtered = fullData.filter(Boolean);
               setMovies(filtered);
               setNoResults(filtered.length === 0);
+              setLoading(false);
             })
            } else {
             setMovies([]);
