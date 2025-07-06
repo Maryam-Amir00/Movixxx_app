@@ -57,4 +57,25 @@ movixxx/
 ```bash
 git clone https://github.com/your-username/movixxx-movie-search-app.git
 cd movixxx-movie-search-app
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Set Up Environment Variable
+
+```ini
+VITE_OMDB_API_KEY=your_api_key_here
+```
+
+### 4. Run The App
+
+```bash
+npm run dev
+```
+
+
 
