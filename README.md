@@ -30,3 +30,31 @@ MOVIXXX is a fully responsive and modern **movie search application** built usin
 
 ## 📁 Folder Structure
 
+```plaintext
+movixxx/
+├── public/
+├── src/
+│ ├── assets/ # Logo, images
+│ ├── api/ # Axios instance
+│ ├── components/ # Navbar, Footer, MovieCard, Modal, SearchBar
+│ ├── context/ # WatchlistContext (Context API + localStorage)
+│ ├── pages/ # Home.jsx, Watchlist.jsx
+│ ├── App.jsx
+│ └── main.jsx
+├── .env # API Key from OMDb
+├── package.json
+├── tailwind.config.js
+└── vite.config.js
+```
+
+
+---
+
+## ⚙️ Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/movixxx-movie-search-app.git
+cd movixxx-movie-search-app
+
