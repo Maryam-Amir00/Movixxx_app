@@ -55,7 +55,7 @@ movixxx/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/movixxx-movie-search-app.git
+git clone https://github.com/Maryam-Amir00/movixxx-movie-search-app.git
 cd movixxx-movie-search-app
 ```
 
@@ -76,6 +76,16 @@ VITE_OMDB_API_KEY=your_api_key_here
 ```bash
 npm run dev
 ```
+---
 
+## 📬 Feedback
+
+Have suggestions or spotted an issue? Feel free to open a GitHub issue. Your feedback is appreciated!
+
+---
+
+## License
+
+This project is licensed under the MIT License.
 
 
