@@ -1,12 +1,32 @@
-# React + Vite
+# 🎬 MOVIXXX – Movie Search Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MOVIXXX is a fully responsive and modern **movie search application** built using **React**, **Tailwind CSS**, **Vite**, and the **OMDb API**. This application allows users to search for movies, view detailed information, and curate a personal watchlist — all with a sleek UI inspired by **neon-glow** and **glassmorphism** design principles.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧩 Features
 
-## Expanding the ESLint configuration
+- 🔍 **Real-time Movie Search** with debounced input
+- 🎥 **Detailed Movie Cards** with hover effects, plot, rating
+- ❤️ **Watchlist** using React Context + localStorage
+- 🎨 **Modern UI/UX** with glassmorphism, neon hover, and responsive design
+- 🌙 **Dark Theme** with polished transitions and glow accents
+- 📦 **API Integration** with [OMDb API](https://www.omdbapi.com/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+| Tech | Usage |
+|------|-------|
+| `React` | Core framework |
+| `Tailwind CSS` | Styling & responsive design |
+| `Vite` | Build tool for fast development |
+| `Axios` | API requests |
+| `Lodash.debounce` | Optimized input handling |
+| `React Icons` | Iconography |
+
+---
+
+## 📁 Folder Structure
+
