@@ -1,6 +1,6 @@
 # 🎬 MOVIXXX – Movie Search Application
 
-MOVIXXX is a modern, responsive **movie search application** built with **React**, **Tailwind CSS**, **Vite**, and the **OMDb API**. It allows users to search movies, view detailed info, sort results by ratings, and manage a personalized watchlist — all wrapped in a sleek dark UI with **neon-glow** and **glassmorphism** aesthetics.
+MOVIXXX is a modern, responsive **movie search application** built with **React**, **Tailwind CSS**, **Vite**, and the **OMDb API**. It allows users to search movies, view detailed info, sort results by ratings, and manage a personalized watchlist all wrapped in a sleek dark UI with **neon-glow** and **glassmorphism** aesthetics.
 
 ---
 
