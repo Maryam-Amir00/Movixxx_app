@@ -1,12 +1,91 @@
-# React + Vite
+# 🎬 MOVIXXX – Movie Search Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MOVIXXX is a fully responsive and modern **movie search application** built using **React**, **Tailwind CSS**, **Vite**, and the **OMDb API**. This application allows users to search for movies, view detailed information, and curate a personal watchlist — all with a sleek UI inspired by **neon-glow** and **glassmorphism** design principles.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧩 Features
 
-## Expanding the ESLint configuration
+- 🔍 **Real-time Movie Search** with debounced input
+- 🎥 **Detailed Movie Cards** with hover effects, plot, rating
+- ❤️ **Watchlist** using React Context + localStorage
+- 🎨 **Modern UI/UX** with glassmorphism, neon hover, and responsive design
+- 🌙 **Dark Theme** with polished transitions and glow accents
+- 📦 **API Integration** with [OMDb API](https://www.omdbapi.com/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+| Tech | Usage |
+|------|-------|
+| `React` | Core framework |
+| `Tailwind CSS` | Styling & responsive design |
+| `Vite` | Build tool for fast development |
+| `Axios` | API requests |
+| `Lodash.debounce` | Optimized input handling |
+| `React Icons` | Iconography |
+
+---
+
+## 📁 Folder Structure
+
+```plaintext
+movixxx/
+├── public/
+├── src/
+│ ├── assets/ # Logo, images
+│ ├── api/ # Axios instance
+│ ├── components/ # Navbar, Footer, MovieCard, Modal, SearchBar
+│ ├── context/ # WatchlistContext (Context API + localStorage)
+│ ├── pages/ # Home.jsx, Watchlist.jsx
+│ ├── App.jsx
+│ └── main.jsx
+├── .env # API Key from OMDb
+├── package.json
+├── tailwind.config.js
+└── vite.config.js
+```
+
+
+---
+
+## ⚙️ Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Maryam-Amir00/movixxx-movie-search-app.git
+cd movixxx-movie-search-app
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Set Up Environment Variable
+
+```ini
+VITE_OMDB_API_KEY=your_api_key_here
+```
+
+### 4. Run The App
+
+```bash
+npm run dev
+```
+---
+
+## 📬 Feedback
+
+Have suggestions or spotted an issue? Feel free to open a GitHub issue. Your feedback is appreciated!
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+
